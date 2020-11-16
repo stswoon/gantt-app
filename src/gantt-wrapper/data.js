@@ -70,32 +70,6 @@ export const tasks = [{
     'progress': 100
 }];
 
-export const dependencies = [{
-    'id': 1,
-    'predecessorId': 3,
-    'successorId': 4,
-    'type': 0
-}, {
-    'id': 2,
-    'predecessorId': 4,
-    'successorId': 5,
-    'type': 0
-}, {
-    'id': 3,
-    'predecessorId': 5,
-    'successorId': 6,
-    'type': 0
-}, {
-    'id': 4,
-    'predecessorId': 6,
-    'successorId': 7,
-    'type': 0
-}, {
-    'id': 5,
-    'predecessorId': 7,
-    'successorId': 9,
-    'type': 0
-}];
 
 export const resources = [{
     'id': 1,
