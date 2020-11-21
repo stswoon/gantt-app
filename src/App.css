@@ -1,0 +1,6 @@
+@import '~antd/dist/antd.css';
+
+.flex-horizontal {
+    display: flex;
+    flex-direction: row;
+}

@@ -3,31 +3,33 @@ import React from 'react';
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
 
+import {Button} from "antd";
+
 import Gantt, {
     Tasks,
-    Dependencies,
     Resources,
     ResourceAssignments,
     Column,
     Editing,
     Toolbar,
-    Item,
-    Validation
+    Item
 } from 'devextreme-react/gantt';
 
-import {tasks, dependencies, resources, resourceAssignments} from './data.js';
+import {tasks, resources, resourceAssignments} from './data.js';
 
 export class GanttWrapper extends React.Component {
     render() {
         return (
             <Gantt
-                taskListWidth={300}
+                taskListWidth={0}
                 scaleType="days"
-                height={700}
+                height={800}
                 firstDayOfWeek={1}
+                showResources={true}
+                onClick={() => {}}
             >
 
-                <Tasks dataSource={tasks}/>
+                <Tasks dataSource={tasks} />
                 <Resources dataSource={resources}/>
                 <ResourceAssignments dataSource={resourceAssignments}/>
 
@@ -38,7 +40,7 @@ export class GanttWrapper extends React.Component {
 
                 <Column dataField="title" caption="Subject" width={300}/>
 
-                <Editing enabled={true} allowTaskDeleting={true}/>
+                <Editing enabled={false}/>
             </Gantt>
         );
     }
